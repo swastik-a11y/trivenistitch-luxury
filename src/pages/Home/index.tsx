@@ -1,6 +1,7 @@
 import React from "react";
-import ProductCard from "./ProductCard";
-import styles from "./Home.module.css";
+import ProductCard from "../../components/ProductCard";
+import InstagramGallery from "../../components/InstagramGallery/InstagramGallery";
+import Newsletter from "../../components/Newsletter/Newsletter";
 
 const collections = [
   { title: "TRIVENI", tagline: "Where Every Journey Begins", img: "/icons.svg" },
@@ -116,11 +117,7 @@ export default function Home() {
       <section className="section">
         <div className="container">
           <h3 className="section-title">Instagram Gallery</h3>
-          <div className="instagram-grid" style={{ marginTop: 12 }}>
-            {Array.from({ length: 6 }).map((_, i) => (
-              <div key={i} className="card image-hover"><img src="/icons.svg" alt={`IG ${i + 1}`} /></div>
-            ))}
-          </div>
+          <InstagramGallery />
           <div style={{ marginTop: 12, textAlign: "center", color: "var(--muted)" }}>FOLLOW US @TRIVENISTITCH</div>
         </div>
       </section>
@@ -128,16 +125,7 @@ export default function Home() {
       {/* Newsletter */}
       <section className="section">
         <div className="container">
-          <div className="card" style={{ padding: 24, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-            <div>
-              <h3 style={{ marginBottom: 6 }}>Be the first to know</h3>
-              <p style={{ color: "var(--muted)" }}>Join our newsletter for new arrivals, exclusive offers and style inspiration.</p>
-            </div>
-            <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
-              <input aria-label="Email" placeholder="Enter your email" style={{ padding: 12, borderRadius: 6, border: "1px solid #eee" }} />
-              <button className="primary-btn">Subscribe</button>
-            </div>
-          </div>
+          <Newsletter />
         </div>
       </section>
 
