@@ -1,7 +1,6 @@
 import React from "react";
-import ProductCard from "../../components/ProductCard";
-import InstagramGallery from "../../components/InstagramGallery/InstagramGallery";
-import Newsletter from "../../components/Newsletter/Newsletter";
+import ProductCard from "./ProductCard";
+import styles from "./Home.module.css";
 
 const collections = [
   { title: "TRIVENI", tagline: "Where Every Journey Begins", img: "/icons.svg" },
@@ -46,22 +45,25 @@ export default function Home() {
 
       {/* Hero */}
       <section className="section">
-        <div className="container hero">
-          <div className="hero-left">
+        <div className={`container ${styles.hero}`}>
+          <div className={styles.heroLeft}>
             <div className="badge">NEW COLLECTION 2026</div>
-            <h1 className="hero-title">Elegance
-              <br />Tailored for
-              <br /><span style={{ color: "var(--primary)" }}>Every Occasion.</span>
+            <h1 className={styles.heroTitle}>
+              Elegance
+              <br />
+              Tailored for
+              <br />
+              <span style={{ color: "var(--primary)" }}>Every Occasion.</span>
             </h1>
-            <p className="hero-sub">Discover handcrafted ethnic wear that blends timeless tradition with modern elegance.</p>
-            <div style={{ marginTop: 24, display: "flex", gap: 12 }}>
+            <p className={styles.heroSub}>Discover handcrafted ethnic wear that blends timeless tradition with modern elegance.</p>
+            <div className={styles.heroCta}>
               <button className="primary-btn">Shop Collection</button>
               <button className="secondary-btn">Discover</button>
             </div>
           </div>
           <div>
             <div className="card image-hover">
-              <img src="/favicon.svg" alt="Hero" style={{ height: 520, objectFit: "cover" }} />
+              <img src="/favicon.svg" alt="Hero" className={styles.heroImage} />
             </div>
           </div>
         </div>
@@ -71,11 +73,11 @@ export default function Home() {
       <section className="section">
         <div className="container">
           <h2 className="section-title text-center">Featured Collections</h2>
-          <div className="collections-grid" style={{ marginTop: 18 }}>
+          <div className={styles.collectionsGrid}>
             {collections.map((c) => (
-              <div key={c.title} className="collection-card image-hover">
-                <img src={c.img} alt={c.title} />
-                <div className="overlay">
+              <div key={c.title} className={`image-hover ${styles.collectionCard}`}>
+                <img className={styles.collectionCardImg} src={c.img} alt={c.title} />
+                <div className={styles.collectionOverlay}>
                   <div style={{ textAlign: "center" }}>
                     <div style={{ fontSize: 14, letterSpacing: "0.12em" }}>{c.title}</div>
                     <div style={{ marginTop: 6, fontSize: 12 }}>{c.tagline}</div>
@@ -104,7 +106,7 @@ export default function Home() {
 
           <div>
             <h2 className="section-title">New Arrivals</h2>
-            <div className="new-grid" style={{ marginTop: 12 }}>
+            <div className={styles.newGrid}>
               {newArrivals.map((p) => (
                 <ProductCard key={p.title} title={p.title} price={p.price} img={p.img} />
               ))}
@@ -117,7 +119,11 @@ export default function Home() {
       <section className="section">
         <div className="container">
           <h3 className="section-title">Instagram Gallery</h3>
-          <InstagramGallery />
+          <div className="instagram-grid" style={{ marginTop: 12 }}>
+            {Array.from({ length: 6 }).map((_, i) => (
+              <div key={i} className="card image-hover"><img src="/icons.svg" alt={`IG ${i + 1}`} /></div>
+            ))}
+          </div>
           <div style={{ marginTop: 12, textAlign: "center", color: "var(--muted)" }}>FOLLOW US @TRIVENISTITCH</div>
         </div>
       </section>
@@ -125,7 +131,16 @@ export default function Home() {
       {/* Newsletter */}
       <section className="section">
         <div className="container">
-          <Newsletter />
+          <div className="card" style={{ padding: 24, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+            <div>
+              <h3 style={{ marginBottom: 6 }}>Be the first to know</h3>
+              <p style={{ color: "var(--muted)" }}>Join our newsletter for new arrivals, exclusive offers and style inspiration.</p>
+            </div>
+            <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
+              <input aria-label="Email" placeholder="Enter your email" style={{ padding: 12, borderRadius: 6, border: "1px solid #eee" }} />
+              <button className="primary-btn">Subscribe</button>
+            </div>
+          </div>
         </div>
       </section>
 
