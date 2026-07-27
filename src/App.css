@@ -1,0 +1,235 @@
+/* ==========================================
+   APP LAYOUT
+========================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #fbf7f2;
+  color: #231f20;
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+}
+
+/* ==========================================
+   GLOBAL CONTAINER
+========================================== */
+
+.app {
+  width: 100%;
+}
+
+.section {
+  width: 100%;
+  padding: 100px 0;
+}
+
+.container {
+  width: min(1400px, 92%);
+  margin: auto;
+}
+
+/* ==========================================
+   TYPOGRAPHY
+========================================== */
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+}
+
+p {
+  margin: 0;
+  color: #5e5e5e;
+  line-height: 1.8;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-family: inherit;
+}
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.primary-btn {
+  background: #c96f7e;
+  color: white;
+  padding: 16px 36px;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: 0.35s;
+}
+
+.primary-btn:hover {
+  background: #b45c6b;
+  transform: translateY(-2px);
+}
+
+.secondary-btn {
+  background: transparent;
+  border: 1px solid #d8d8d8;
+  color: #231f20;
+  padding: 16px 36px;
+  border-radius: 999px;
+  transition: 0.35s;
+}
+
+.secondary-btn:hover {
+  background: white;
+}
+
+/* ==========================================
+   SECTION HEADINGS
+========================================== */
+
+.section-title {
+  font-size: clamp(40px, 5vw, 70px);
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.section-subtitle {
+  text-align: center;
+  max-width: 700px;
+  margin: auto;
+  color: #6b6b6b;
+  margin-bottom: 60px;
+}
+
+/* ==========================================
+   CARDS
+========================================== */
+
+.card {
+  background: white;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.08);
+  transition: 0.4s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.12);
+}
+
+/* ==========================================
+   IMAGE HOVER
+========================================== */
+
+.image-hover {
+  overflow: hidden;
+}
+
+.image-hover img {
+  transition: 0.5s;
+}
+
+.image-hover:hover img {
+  transform: scale(1.08);
+}
+
+/* ==========================================
+   BADGES
+========================================== */
+
+.badge {
+  display: inline-block;
+  padding: 8px 18px;
+  border-radius: 999px;
+  background: #f8ede7;
+  color: #b8795c;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+/* ==========================================
+   SPACING HELPERS
+========================================== */
+
+.mt-2 {
+  margin-top: 20px;
+}
+
+.mt-4 {
+  margin-top: 40px;
+}
+
+.mt-6 {
+  margin-top: 60px;
+}
+
+.mb-4 {
+  margin-bottom: 40px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 1024px) {
+  .section {
+    padding: 80px 0;
+  }
+
+  .section-title {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 0;
+  }
+
+  .container {
+    width: 94%;
+  }
+
+  .section-title {
+    font-size: 38px;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    width: 100%;
+  }
+}

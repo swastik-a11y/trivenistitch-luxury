@@ -1,0 +1,171 @@
+.featuredSection {
+  padding: 110px 24px;
+  background: #fbf7f2;
+}
+
+.featuredHeader {
+  max-width: 1400px;
+  margin: 0 auto 34px;
+}
+
+.featuredKicker {
+  margin: 0 0 12px;
+  color: #c96f7e;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.featuredTitle {
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(38px, 5vw, 68px);
+  line-height: 0.98;
+  color: #231f20;
+  max-width: 980px;
+}
+
+.featuredText {
+  margin: 18px 0 0;
+  max-width: 720px;
+  color: #5e5e5e;
+  line-height: 1.8;
+  font-size: 18px;
+}
+
+.featuredGrid {
+  max-width: 1400px;
+  margin: 36px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.featureCard {
+  position: relative;
+  overflow: hidden;
+  min-height: 360px;
+  border-radius: 28px;
+  padding: 24px;
+  border: 1px solid rgba(201, 111, 126, 0.1);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.06);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  background: linear-gradient(180deg, #ffffff, #f7efe9);
+}
+
+.featureCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.1);
+}
+
+.featureCardGlow {
+  position: absolute;
+  inset: auto -40px -40px auto;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  filter: blur(28px);
+  background: rgba(177, 74, 87, 0.14);
+}
+
+.featureCardTop {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.featureBadge {
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(214, 165, 122, 0.12);
+  color: #d6a57a;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.featureLabel {
+  color: #b14a57;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+
+.featureCardBottom {
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  bottom: 24px;
+}
+
+.featureCardBottom h3 {
+  margin: 0 0 10px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 30px;
+  line-height: 1;
+  color: #231f20;
+}
+
+.featureCardBottom p {
+  margin: 0 0 18px;
+  color: #5e5e5e;
+  line-height: 1.7;
+}
+
+.featureButton {
+  padding: 14px 20px;
+  border-radius: 999px;
+  background: #c96f7e;
+  color: white;
+  font-weight: 700;
+}
+
+.tone1 {
+  background:
+    radial-gradient(circle at top right, rgba(201, 111, 126, 0.14), transparent 35%),
+    linear-gradient(180deg, #fffdfc, #f4ece6);
+}
+
+.tone2 {
+  background:
+    radial-gradient(circle at top right, rgba(214, 165, 122, 0.16), transparent 35%),
+    linear-gradient(180deg, #ffffff, #f4efe9);
+}
+
+.tone3 {
+  background:
+    radial-gradient(circle at top right, rgba(90, 120, 109, 0.12), transparent 35%),
+    linear-gradient(180deg, #ffffff, #f3f1ea);
+}
+
+.tone4 {
+  background:
+    radial-gradient(circle at top right, rgba(235, 179, 189, 0.16), transparent 35%),
+    linear-gradient(180deg, #ffffff, #f7f0f3);
+}
+
+.tone5 {
+  background:
+    radial-gradient(circle at top right, rgba(154, 124, 97, 0.14), transparent 35%),
+    linear-gradient(180deg, #ffffff, #f3ede6);
+}
+
+.tone6 {
+  background:
+    radial-gradient(circle at top right, rgba(111, 29, 36, 0.12), transparent 35%),
+    linear-gradient(180deg, #ffffff, #f2ebe7);
+}
+
+@media (max-width: 960px) {
+  .featuredGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .featureCard {
+    min-height: 300px;
+  }
+}

@@ -1,0 +1,16 @@
+.announcementBar {
+  width: 100%;
+  padding: 10px 16px;
+  background: linear-gradient(90deg, #4a1218, #6f1d24, #8f2d37);
+  color: #f5f1ee;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.announcementBar p {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
